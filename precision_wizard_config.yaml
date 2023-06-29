@@ -1,0 +1,36 @@
+Optimizer:
+    bandwidth_reduction_threshold: 0.1
+    custom_bandwidth_reduction_threshold: {
+      'layer_name': 0.1
+    }
+    per_channel: False
+    data_quantization:
+        status: True
+        bits: 8
+        custom_bits: { }
+        symmetric: False
+    weights_quantization:
+        status: True
+        bits: 8
+        custom_bits: { }
+Simulator:
+    L1: {
+      size in MB: 1
+    }
+    L2: {
+      size in MB: 2,
+      bytes per cycle to DDR: 32
+    }
+    sparsity: 0
+    weight_compression_rate: 0
+    frequency: 1250
+    winograd: false
+    mt_grace: 8
+    bw_limitation: 0
+    depthwise_to_vpu: true
+    engine_count: 1
+    concurrent_processes: 10
+    alpha: 1
+    beta: 1
+    data_bit_count: 8
+    weight_bit_count: 8
